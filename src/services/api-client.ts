@@ -1,7 +1,7 @@
 import type { ApiRequest, ApiResponse, AiAnalysis, AnalysisTone } from '@/types/api';
 import { mockApiResponse, mockAiAnalysis } from './mock-data';
 
-const LOCAL_DEV_API = 'http://localhost:3001';
+const LOCAL_DEV_API = 'http://localhost:4000';
 
 function normalizeApiBaseUrl(value: string | undefined): string {
   const raw = value?.trim() ?? '';
