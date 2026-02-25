@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 20% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 20% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 20% 18%;
+
+    --primary: 216 89% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 35% 96%;
+    --secondary-foreground: 222 20% 24%;
+
+    --muted: 210 32% 96%;
+    --muted-foreground: 215 16% 45%;
+
+    --accent: 30 95% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 78% 56%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 24% 88%;
+    --input: 215 24% 88%;
+    --ring: 216 89% 54%;
+
+    --radius: 0.75rem;
+
+    --method-get: 149 76% 44%;
+    --method-post: 212 99% 63%;
+    --method-put: 37 96% 57%;
+    --method-patch: 273 80% 67%;
+    --method-delete: 0 88% 63%;
+
+    --status-success: 149 76% 44%;
+    --status-warning: 37 96% 57%;
+    --status-error: 0 88% 63%;
+    --status-info: 212 99% 63%;
+
+    --glass-border: 215 24% 88%;
+
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 222 20% 18%;
+    --sidebar-primary: 216 89% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 35% 96%;
+    --sidebar-accent-foreground: 222 20% 24%;
+    --sidebar-border: 215 24% 88%;
+    --sidebar-ring: 216 89% 54%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    background: hsl(var(--background));
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .saas-shell {
+    @apply relative;
+  }
+
+  .surface {
+    @apply rounded-xl border border-border bg-card shadow-sm;
+  }
+
+  .surface-soft {
+    @apply rounded-lg border border-border bg-background;
+  }
+
+  .text-gradient {
+    @apply text-foreground;
+  }
+}
